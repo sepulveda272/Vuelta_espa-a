@@ -3,9 +3,9 @@ import dotenv from "dotenv";
 import conectarDB from "./config/config.js";
 import cors from "cors"
 import ciclistasRouter from "./routes/ciclistas.routes.js"
+import equiposRouter from "./routes/equipo.routes.js"
 
 const app = express();
-
 
 app.use(express.json());
 
@@ -18,6 +18,7 @@ const configCors = {
 app.use(cors(configCors))
 
 app.use("/ciclistas", ciclistasRouter);
+app.use("/equipos", equiposRouter);
 
 const PORT = process.env.PORT;
 
