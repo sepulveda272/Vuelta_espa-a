@@ -1,25 +1,30 @@
 import mongoose from "mongoose";
 
-const equiposSchema = mongoose.Schema({
+const etapasSchema = mongoose.Schema({
     nombre:{
         type: String,
         required: true,
         trim: true,
     },
-    pais:{
+    fecha:{
         type: String,
         required: true,
         trim: true,
     },
-    director:{
+    terreno:{
         type: String,
         required: true,
         trim: true,
     },
-    año:{
+    salida:{
         type: String,
         required: true,
         trim: true,
+    },
+    llegada:{
+        type: String,
+        required: true,
+        trim: true
     }
 },
 {
@@ -27,6 +32,6 @@ const equiposSchema = mongoose.Schema({
 }
 );
 
-const Equipo = mongoose.model("Equipos",equiposSchema);
+const Etapa = mongoose.model("Etapas",etapasSchema);
 
-export default Equipo
+export default Etapa
