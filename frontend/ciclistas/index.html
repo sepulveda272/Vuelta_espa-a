@@ -37,26 +37,26 @@
                 <ul class="menu-links">
                     <li class="nav-link active">
                         <a href="./index.html">
-                            <i class='bx bx-home-alt icon' ></i>
+                            <i class='bi bi-bicycle icon' ></i>
                             <span class="text nav-text">Ciclistas</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="../equipos/index.html">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <i class='bi bi-flag-fill icon' ></i>
                             <span class="text nav-text">Equipos</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span class="text nav-text">Clientes</span>
+                            <i class='bi bi-bar-chart-line-fill icon' ></i>
+                            <span class="text nav-text">Etapas</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-wallet icon' ></i>
-                            <span class="text nav-text">Productos</span>
+                            <i class='bi bi-trophy-fill icon' ></i>
+                            <span class="text nav-text">Premios</span>
                         </a>
                     </li>
                 </ul>
@@ -94,21 +94,33 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Agregar Categoria</h1>
+            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Agregar Ciclista</h1>
             </div>
             <div class="modal-body">
-                <form action="" method="post" class="formularios" id="formCategoria">
+                <form action="" method="post" class="formularios" id="formCiclista">
                     <div class="mb-3">
-                        <label for="" class="form-label">Nombre Categoria: </label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre categoria">
+                        <label for="nombre" class="form-label">Nombre del Ciclista: </label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre del ciclista">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Descripcion : </label>
-                        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion">
+                        <label for="edad" class="form-label">Edad del ciclista : </label>
+                        <input type="number" class="form-control" id="edad" placeholder="Ingrese la edad">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Imagen : </label>
-                        <input type="text" class="form-control" id="imagen" placeholder="Ingrese imagen">
+                        <label for="nacionalidad" class="form-label">Nacionalidad del ciclista : </label>
+                        <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese la nacionalidad">
+                    </div>
+                    <div class="mb-3">
+                        <label for="equipo" class="form-label">Equipo del ciclista : </label>
+                        <input type="text" class="form-control" id="equipo" placeholder="Ingrese el equipo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estadistica" class="form-label">Estadisticas del ciclista : </label>
+                        <input type="text" class="form-control" id="estadistica" placeholder="Ingrese las estadisticas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion : </label>
+                        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese la descripcion">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
@@ -125,26 +137,38 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Editar Categoria</h1>
+            <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Editar Cicliostas</h1>
             </div>
             <div class="modal-body">
-                <form action="" method="post" class="formularios" id="formEditCategoria">
+                <form action="" method="post" class="formularios" id="formEditCiclista">
                     <input type="hidden" id="idEdit" name="">
                     <div class="mb-3">
-                        <label for="" class="form-label">Nombre Categoria: </label>
+                        <label for="nombreEdit" class="form-label">Nombre del ciclista : </label>
                         <input type="text" class="form-control" id="nombreEdit">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Descripcion : </label>
-                        <input type="text" class="form-control" id="descripcionEdit">
+                        <label for="edadEdit" class="form-label">Edad del ciclista : </label>
+                        <input type="text" class="form-control" id="edadEdit">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Imagen : </label>
-                        <input type="text" class="form-control" id="imagenEdit">
+                        <label for="nacionalidadEdit" class="form-label">Nacionalidad del ciclista : </label>
+                        <input type="text" class="form-control" id="nacionalidadEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="equipoEdit" class="form-label">Equipo del ciclista : </label>
+                        <input type="text" class="form-control" id="equipoEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estadisticasEdit" class="form-label">Estadisticas del ciclista: </label>
+                        <input type="text" class="form-control" id="estadisticasEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionEdit" class="form-label">Descripcion: </label>
+                        <input type="text" class="form-control" id="descripcionEdit">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="input" class="btn btn-primary btnForm">Actualizar</button>
+                        <button type="submit" class="btn btn-primary btnForm">Actualizar</button>
                 </form>
             </div>
             </div>

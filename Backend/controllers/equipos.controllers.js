@@ -35,6 +35,15 @@ const actualizarEquipo = async (req, res) =>{
         if(req.body.nombre){
             equipo.nombre = req.body.nombre;
         }
+        if(req.body.pais){
+            equipo.pais = req.body.pais;
+        }
+        if(req.body.director){
+            equipo.director = req.body.director;
+        }
+        if(req.body.año){
+            equipo.año = req.body.año;
+        }
         await equipo.save()
         res.send(equipo);
     } catch (error) {

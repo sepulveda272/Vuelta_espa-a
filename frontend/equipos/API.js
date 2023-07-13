@@ -1,25 +1,25 @@
-const url = "http://localhost:5000/ciclistas/all";
-const urlNuevo = "http://localhost:5000/ciclistas/add";
-const urlBorrar = "http://localhost:5000/ciclistas/del";
-const urlActualizar = "http://localhost:5000/ciclistas/upd";
+const url = "http://localhost:5000/equipos/all";
+const urlNuevo = "http://localhost:5000/equipos/add";
+const urlBorrar = "http://localhost:5000/equipos/del";
+const urlActualizar = "http://localhost:5000/equipos/upd";
 
 
-export const obtenerCiclistas = async () => {
+export const obtenerEquipo = async () => {
     try {
-        const ciclistas = await fetch(url);
-        const datosCiclistas = await ciclistas.json();
-        return datosCiclistas;
+        const equipos = await fetch(url);
+        const datosEquipos = await equipos.json();
+        return datosEquipos;
     } catch (error) {
         console.log(error,"no sirve");
     }
 };
 
 
-export const nuevoCiclista = async (ciclistas) => {
+export const nuevoEquipo = async (equipos) => {
     try {
         await fetch(urlNuevo,{
             method: "POST",
-            body:JSON.stringify(ciclistas),
+            body:JSON.stringify(equipos),
             headers:{'Content-Type':'application/json'}
         });
         window.location.href ="index.html"
@@ -29,7 +29,7 @@ export const nuevoCiclista = async (ciclistas) => {
 };
 
 
-export const deleteCiclista = async (_id) => {
+export const deleteEquipo = async (_id) => {
   try {
         await fetch(`${urlBorrar}/${_id}`,{
             method:'DELETE'
@@ -54,7 +54,7 @@ export const deleteCiclista = async (_id) => {
 
 
 
-export const editarCiclista = async (datos) => {
+export const editarEquipo = async (datos) => {
     try {
         await fetch(`${urlActualizar}/${datos._id}`, {
             method: "PATCH",

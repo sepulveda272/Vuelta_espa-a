@@ -38,6 +38,15 @@ const actualizarCiclistas = async (req, res) =>{
         if(req.body.edad){
             ciclista.edad = req.body.edad;
         }
+        if(req.body.nacionalidad){
+            ciclista.nacionalidad = req.body.nacionalidad;
+        }
+        if(req.body.equipo){
+            ciclista.equipo = req.body.equipo;
+        }
+        if(req.body.estadistica){
+            ciclista.estadistica = req.body.estadistica;
+        }
         if(req.body.descripcion){
             ciclista.descripcion = req.body.descripcion;
         }
