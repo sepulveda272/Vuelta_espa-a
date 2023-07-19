@@ -7,10 +7,13 @@ const obtenerCiclistas = async (req,res)=>{
 };
 
 const agregarCiclistas = async (req,res)=>{
-    const ciclista = new Ciclista(req.body);
+    
 
     try {
-        const nuevoCiclista = await ciclista.save();
+        const {nombre,edad,nacionalidad,equipo,estadistica,descripcion} = req.body;
+        const ciclist = new Ciclista({nombre,edad,nacionalidad,equipo,estadistica,descripcion});
+
+        const nuevoCiclista = await ciclist.save();
 
         res.json(nuevoCiclista);
     } catch (error) {
